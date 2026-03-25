@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basics Practice</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+        }
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 10px 30px; /* Padding inside the button */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer */
+            font-size: 16px; /* Font size */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .highlight {
+            color: red;
+            font-weight: italic;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #333;
+            color: white;
+        }
+        table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Fixed the display value */
+            margin: 20px 0;
+        }
+        .horizontal-radio {
+            display: flex;
+            flex-direction: row; /* Arrange items horizontally */
+            padding-left: 5px;
+        }
+        .horizontal-radio label {
+            margin-right: 20px; /* Adds space between radio buttons */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to HTML Practice</h1>
+        <p>&#128512; A simple webpage to learn the basics</p>
+    </header>
+
+    <section>
+        <h2 style="background-color:powderblue;" align= center color =  red>About HTML</h2>
+        <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages.</p>
+        <ul>
+            <li class="highlight">HTML is easy to learn</li>
+            <li>It allows structuring of content</li>
+            <li>Combines with CSS and JavaScript for full functionality</li>
+        </ul>
+    </section>
+	
+    <section>
+        <h2><mark>Sample Form</mark></h2>
+        <form action="#" method="post">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="full-name" pattern="[A-Za-z]{3}" autofocus><br><br>
+
+            <label for="email-id">Email Id:</label>
+            <input type="email" id="email-id" name="email-id" required><br><br>
+
+            <div class="horizontal-radio">
+                <label for="choose">Choose Your favorite color:</label>
+                <label>
+                    <input type="radio" name="color" value="red"> Red
+                </label>
+                <label>
+                    <input type="radio" name="color" value="yellow"> Yellow
+                </label>
+                <label> 
+                    <input type="radio" name="color" value="green"> Green
+                </label>
+            </div><br>
+
+            <label for="fruit">Select Your favorite Fruit:</label>
+            <select id="fruit1" name="fruit1">
+                <option value="all" selected>ALL</option>
+                <option value="apple">Apple</option>
+                <option value="banana">Banana</option>
+                <option value="orange">Orange</option>
+                <option value="grape">Grape</option>
+            </select><br><br>
+
+            <label for="fruit-group">Choose a fruit:</label>
+            <select id="fruit-group" name="fruit-group">
+                <optgroup label="Citrus Fruits">
+                    <option value="orange">Orange</option>
+                    <option value="lemon">Lemon</option>
+                </optgroup>
+                <optgroup label="Berries">
+                    <option value="strawberry">Strawberry</option>
+                    <option value="blueberry">Blueberry</option>
+                </optgroup>
+            </select><br><br>
+ <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" value="John" disabled><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+	<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").style.fontSize = "25px"; 
+  document.getElementById("demo").style.color = "red";
+  document.getElementById("demo").style.backgroundColor = "yellow";        
+}
+</script>
+
+<button type="button" onclick ="myFunction()">Click Me!</button><br>
+<form action="/action_page.php">
+  <label for="files">Select files:</label>
+  <input type="file" id="files" name="files" multiple><br><br>
+  <label for="datemax">Enter a date before 1980-01-01:</label>
+  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+  <label for="datemin">Enter a date after 2000-01-01:</label>
+  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+</form>
+<!--<p><a href="#C4">Jump to Chapter 4</a></p>
+<p><a href="#C10">Jump to Chapter 10</a></p>
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+
+<h2 id="C10">Chapter 10</h2>
+<p>This chapter explains ba bla bla</p>--!>
+	
+    <h2>Sample Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mallaiah</td>
+                <td>30</td>
+                <td>Jaipur</td>
+                <td>Rajasthan</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Useful Link</h2>
+    <p>
+        Visit the official <a href="https://www.w3schools.com" target="_blank">W3Schools</a> website to learn more about HTML.
+    </p>
+
+    <h2>Image Example</h2>
+    <img src="images.jpg" alt="Placeholder Image">
+    
+    <footer>
+        <p>&copy; 2024 HTML Practice Page</p>
+    </footer>
+</body>
+</html>
